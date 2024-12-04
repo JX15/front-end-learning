@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  /* 3行 2列，repeat(3,100px) 等价于 100px 100px 100px */
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(2, 100px);
+
+  /* 
+    grid-template-rows和grid-template-columns的混合写法
+    3行 2列 ，第二行的大小是自动
+    30fr表示 30%剩余可用大小
+  */
+  grid-template: 100px auto 100px / 30fr 70fr;
+
+  /* 给每个方格命名， .表示不需要名字 */
+  grid-template-areas: 'header  header', 'sidebar main', '.       footer';
+
+  /* 设置行方格、列方格间隙 */
+  row-gap: 10px;
+  column-gap: 10px;
+
+  /* row-gap 和 column-gap的简写，如果相同都是10px，可以写成 gap: 10px */
+  gap: 10px 20px;
+}
+
+.box-one {
+  /* 
+    表示 从 第1列 开始到 最后一列 结束 
+    如果一共最后一列是第3列，则等价于 1 / 3，也等价于 1 / span 2
+  */
+  grid-column: 1 / -1;
+
+  /* 设置为header区域,在这里等价于上面的 grid-column: 1 / -1 */
+  grid-area: header;
+}
+
+.box-four {
+  grid-area: footer;
+}
+
+.box {
+  background-color: gold;
+}

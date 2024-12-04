@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*   600px <= 屏幕尺寸 <= 900px 使用括号内的css */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+}

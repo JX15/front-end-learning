@@ -1,0 +1,23 @@
+.boxes {
+  border: 3px solid lightgrey;
+}
+
+/* 相对当前div */
+.box-two {
+  background: tomato;
+  /* 相对的,当前div */
+  position: relative;
+  /* 离左边界的距离 */
+  left: 4rem;
+  /* 离下边界的距离 */
+  bottom: 4rem;
+  /* 表示z轴，z轴指向屏幕外，越大表示理我们越近 */
+  z-index: 999999;
+}
+
+.box-one {
+  background: dodgerblue;
+}
+.box-three {
+  background: yellow;
+}
