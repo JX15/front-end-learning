@@ -1,22 +1,21 @@
-.boxes{
+.boxes {
   border: 3px solid lightgrey;
   position: relative;
 }
 /* 相对父div ,父div的position必须设置为relative*/
-.box-two{
+.box-two {
   background: tomato;
   position: absolute;
   /* 离右边界的距离 */
   right: 0;
   /* 离下边界的距离 */
   bottom: 0;
-  z-index:999999;
+  z-index: 999999;
 }
 
-
-.box-one{
+.box-one {
   background: dodgerblue;
 }
-.box-three{
+.box-three {
   background: yellow;
 }
